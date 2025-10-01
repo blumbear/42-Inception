@@ -47,12 +47,12 @@ volumes:
   wordpress:
     driver_opts:
       type: none
-      device: /home/ttaquet/data/wordpress
+      device: /home/${USER}/ttaquet/data/wordpress
       o: bind
   mariadb:
     driver_opts:
       type: none
-      device: /home/ttaquet/data/mariadb
+      device: /home/${USER}/ttaquet/data/mariadb
       o: bind
 
 networks:
