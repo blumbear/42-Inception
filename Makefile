@@ -1,6 +1,6 @@
 all:
-	mkdir -p /home/${USER}/ttaquet/data/mariadb
-	mkdir -p /home/${USER}/ttaquet/data/wordpress
+	mkdir -p /home/ttaqueetdata/mariadb
+	mkdir -p /home/ttaqueetdata/wordpress
 	docker compose -f ./srcs/docker-compose.yml up -d --build
 
 up:
@@ -11,7 +11,7 @@ down:
 
 fclean: down
 	docker system prune -fa --volumes
-	rm -rf /home/${USER}/ttaquet/data/mariadb/*
-	rm -rf /home/${USER}/ttaquet/data/wordpress/*
+	rm -rf /home/ttaqueetdata/mariadb/*
+	rm -rf /home/ttaqueetdata/wordpress/*
 
 re: fclean all
